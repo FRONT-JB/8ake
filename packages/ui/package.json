@@ -1,0 +1,63 @@
+{
+  "name": "@repo/ui",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "shadcn": "pnpm dlx shadcn@latest",
+    "lint": "eslint .",
+    "build": "rm -rf dist && rollup --config",
+    "dev": "pnpm build --watch",
+    "prebuild": "node scripts/generate-package-exports.js"
+  },
+  "peerDependencies": {
+    "react": "catalog:",
+    "@radix-ui/react-accordion": "catalog:",
+    "@radix-ui/react-slot": "catalog:",
+    "class-variance-authority": "catalog:",
+    "clsx": "catalog:",
+    "lucide-react": "catalog:",
+    "tailwind-merge": "catalog:"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@rollup/plugin-replace": "^6.0.2",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "autoprefixer": "catalog:",
+    "glob": "^11.0.1",
+    "postcss": "catalog:",
+    "postcss-load-config": "catalog:",
+    "rollup": "^4.34.8",
+    "tailwindcss": "catalog:",
+    "typescript": "catalog:"
+  },
+  "dependencies": {
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "type": "module",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./postcss.config": "./postcss.config.mjs",
+    "./styles.css": "./src/globals.css",
+    "./lib/utils": {
+      "types": "./dist/lib/utils.d.ts",
+      "default": "./dist/lib/utils.js"
+    },
+    "./tailwind.config": "./tailwind.config.ts",
+    "./components/button": {
+      "import": "./dist/button.mjs",
+      "require": "./dist/button.cjs"
+    },
+    "./components/accordion": {
+      "import": "./dist/accordion.mjs",
+      "require": "./dist/accordion.cjs"
+    }
+  },
+  "sideEffects": false
+}
