@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.0 (2025-04-18)
+
+
+### Configuration
+
+* commitizen 설정 추가 ([f435b49](https://github.com/FRONT-JB/8ake/commit/f435b49f98f3bc18db15973bd7673da137c37e63))
+
 ## [1.0.2](https://github.com/FRONT-JB/nextjs15-turborepo-pnpm-template/compare/v1.0.1...v1.0.2) (2025-03-01)
 
 
