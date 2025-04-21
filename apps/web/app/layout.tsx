@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 
+import { TiltedScroll } from '@repo/ui/components/tilted-scroll';
 import { cn } from '@repo/ui/lib/utils';
 
 import '@repo/ui/styles.css';
@@ -21,11 +22,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           'container max-w-screen-lg flex h-full gap-1 bg-stone-50 justify-between'
         )}
       >
-        <div className="min-w-0 sticky font-mono top-0 w-[40%] h-screen bg-stone-100 flex flex-col items-center justify-center">
-          Aside
+        <div className="min-w-0 sticky border font-mono top-0 w-[40%] h-screen bg-white flex flex-col items-center justify-center">
+          <TiltedScroll />
         </div>
 
-        <main className="flex-1 h-screen bg-white px-2 border">{children}</main>
+        <main className="flex-1 h-screen bg-white p-2 border">{children}</main>
       </body>
     </html>
   );

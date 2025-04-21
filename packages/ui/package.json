@@ -50,6 +50,10 @@
       "default": "./dist/lib/utils.js"
     },
     "./tailwind.config": "./tailwind.config.ts",
+    "./components/tilted-scroll": {
+      "import": "./dist/tilted-scroll.mjs",
+      "require": "./dist/tilted-scroll.cjs"
+    },
     "./components/button": {
       "import": "./dist/button.mjs",
       "require": "./dist/button.cjs"
