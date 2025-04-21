@@ -18,13 +18,13 @@ module.exports = {
       {
         type: 'list',
         name: 'type',
-        message: '1️⃣ 커밋 유형을 선택하세요:',
+        message: '1️⃣ 커밋 유형을 선택하세요 :',
         choices: typeChoices,
       },
       {
         type: 'input',
         name: 'subject',
-        message: '2️⃣ 커밋 제목을 입력하세요:',
+        message: '2️⃣ 커밋 제목을 입력하세요 (최대 100자):',
         validate: (input) => input.length > 0 && input.length <= 100,
       },
       {
