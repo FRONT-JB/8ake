@@ -3,6 +3,10 @@
   "version": "1.0.2",
   "private": true,
   "license": "MIT",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
     "cz": "cz",
     "build": "turbo build",
