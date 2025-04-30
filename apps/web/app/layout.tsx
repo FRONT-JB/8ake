@@ -5,6 +5,8 @@ import { Header } from '@/widgets/header';
 import { TiltedScroll } from '@repo/ui/components/tilted-scroll';
 import { cn } from '@repo/ui/lib/utils';
 
+import { Providers } from './providers';
+
 import '@repo/ui/styles.css';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -25,7 +27,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main className="flex-1 h-screen flex flex-col bg-white pb-2 border gap-2">
           <Header />
 
-          {children}
+          <Providers>{children}</Providers>
         </main>
       </body>
     </html>

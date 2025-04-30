@@ -1,9 +1,18 @@
-import { Recipe } from '@/widgets/recipe';
+import { getRecipeList } from '@/entities/recipe';
+import { RecipeWidget } from '@/widgets/recipe-widget';
+import { dehydrate, HydrationBoundary, QueryClient } from '@tanstack/react-query';
 
-export default function Page() {
+export default async function HomePage() {
+  const queryClient = new QueryClient();
+
+  await queryClient.prefetchQuery({
+    queryKey: ['recipes'],
+    queryFn: getRecipeList,
+  });
+
   return (
-    <section className="flex-1 px-2 ">
-      <Recipe />
-    </section>
+    <HydrationBoundary state={dehydrate(queryClient)}>
+      <RecipeWidget />
+    </HydrationBoundary>
   );
 }

@@ -7,10 +7,10 @@ import { RotateCcw } from 'lucide-react';
 
 type TemperatureProps = React.ComponentProps<'input'>;
 
-export function Temperature({ onChange }: TemperatureProps) {
+export function Temperature({ onChange, value = 100 }: TemperatureProps) {
   const minValue = 0.0;
   const maxValue = 400;
-  const initialValue = [100];
+  const initialValue = [Number(value)];
   const defaultValue = [0];
 
   const {

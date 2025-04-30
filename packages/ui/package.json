@@ -90,10 +90,6 @@
       "import": "./dist/form.mjs",
       "require": "./dist/form.cjs"
     },
-    "./components/empty-state": {
-      "import": "./dist/empty-state.mjs",
-      "require": "./dist/empty-state.cjs"
-    },
     "./components/dialog": {
       "import": "./dist/dialog.mjs",
       "require": "./dist/dialog.cjs"
