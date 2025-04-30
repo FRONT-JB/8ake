@@ -1,5 +1,31 @@
 # Changelog
 
+## 1.0.0 (2025-04-30)
+
+
+### Other Changes
+
+* pwa 설정 추가 ([c73b210](https://github.com/FRONT-JB/8ake/commit/c73b210c81c0f0e691ce1110d50cc6d17d967e55))
+* pwa 설정 추가 ([#4](https://github.com/FRONT-JB/8ake/issues/4)) ([972450b](https://github.com/FRONT-JB/8ake/commit/972450b60eb7111cfdbe2552417b063f59d2309a))
+* ui 패키지 배포설정 수정 ([f86f904](https://github.com/FRONT-JB/8ake/commit/f86f904f05943d746726c9f51d8f56361735837f))
+
+
+### Styles
+
+* aside, main 영역 레이아웃 스타일 추가 ([38c85f9](https://github.com/FRONT-JB/8ake/commit/38c85f91d19eba49c890361ac786cd09ac7cacc9))
+* shadcn 컴포넌트 추가 ([16309bb](https://github.com/FRONT-JB/8ake/commit/16309bba6787ad2ad5b1e7b89da10796e4bbc745))
+* 레시피 관련 기능 추가 및 레이아웃 변경 ([3293a33](https://github.com/FRONT-JB/8ake/commit/3293a336e4b02cff914cafe8ea72f0bafd340a2a))
+* 레시피 관련 기능 추가 및 레이아웃 변경 ([#3](https://github.com/FRONT-JB/8ake/issues/3)) ([d5a1d68](https://github.com/FRONT-JB/8ake/commit/d5a1d68b7ceddffd244cca0a709ad4a5c31d675f))
+* 레시피 레이아웃, 다이얼로그 추가 ([b6adc26](https://github.com/FRONT-JB/8ake/commit/b6adc268d992eadb208b8c2dd2f9e4df0cff1e87))
+* 레이아웃, 레시피 다이얼로그 추가 ([b89e5fe](https://github.com/FRONT-JB/8ake/commit/b89e5fe3f6ad15a9c4fbcfd3c1ef9562e3784c72))
+* 레이아웃, 레시피 다이얼로그 추가 ([b89e5fe](https://github.com/FRONT-JB/8ake/commit/b89e5fe3f6ad15a9c4fbcfd3c1ef9562e3784c72))
+* 메인 랜딩 레이아웃 스타일 추가 ([f1cb2e0](https://github.com/FRONT-JB/8ake/commit/f1cb2e010f3adbfc05608104e29fa2a0023e0c68))
+
+
+### Configuration
+
+* commitizen 설정 추가 ([f435b49](https://github.com/FRONT-JB/8ake/commit/f435b49f98f3bc18db15973bd7673da137c37e63))
+
 ## [1.0.2](https://github.com/FRONT-JB/nextjs15-turborepo-pnpm-template/compare/v1.0.1...v1.0.2) (2025-03-01)
 
 
