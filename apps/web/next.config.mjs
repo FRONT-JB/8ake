@@ -20,18 +20,8 @@ const transforms = Object.keys(uiPackageJson.exports).reduce((acc, key) => {
     return acc;
   }
 
-  const srcPath = key.replace('./', '') + '.tsx';
-  const sourceFile = readFileSync(join(process.cwd(), '../../packages/ui/src', srcPath), 'utf8');
-
-  // export 구문 찾기 (예: export { Button, buttonVariants })
-  const exportMatches = sourceFile.match(/export\s+{([^}]+)}/);
-  if (exportMatches) {
-    const exports = exportMatches[1].split(',').map((e) => e.trim());
-    exports.forEach((exportName) => {
-      // @repo/ui 경로 추가
-      acc[exportName] = '@repo/ui' + key.slice(1); // './' 제거하고 앞에 @repo/ui 추가
-    });
-  }
+  const componentName = key.replace('./components/', '');
+  acc[componentName] = `@repo/ui/components/${componentName}`;
 
   return acc;
 }, {});
@@ -40,10 +30,19 @@ const transforms = Object.keys(uiPackageJson.exports).reduce((acc, key) => {
 const nextConfig = {
   transpilePackages: ['@repo/ui'],
   modularizeImports: {
-    '@repo/ui': {
+    '@repo/ui/components': {
       transform: transforms,
-      skipDefaultConversion: true,
+      preventFullImport: true,
     },
+  },
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+      };
+    }
+    return config;
   },
 };
 
