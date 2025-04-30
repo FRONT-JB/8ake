@@ -1,11 +1,12 @@
-import { readFileSync } from 'fs';
-import { join } from 'path';
+import withPWA from 'next-pwa';
 
 import createBundleAnalyzer from '@next/bundle-analyzer';
 
+import { readFileSync } from 'fs';
+import { join } from 'path';
+
 const withBundleAnalyzer = createBundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
-  openAnalyzer: true,
 });
 
 const uiPackageJson = JSON.parse(
@@ -46,4 +47,11 @@ const nextConfig = {
   },
 };
 
-export default withBundleAnalyzer(nextConfig);
+const config = withPWA({
+  dest: 'public',
+  register: true,
+  skipWaiting: true,
+  disable: process.env.NODE_ENV === 'development',
+})(nextConfig);
+
+export default withBundleAnalyzer(config);
